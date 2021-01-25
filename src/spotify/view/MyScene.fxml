@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="HomePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="spotify.controller.homeViewController">
+    <left>
+        <VBox prefHeight="800.0" prefWidth="206.0" style="-fx-background-color: lightgray;" BorderPane.alignment="CENTER">
+            <children>
+                <Label alignment="CENTER" prefHeight="103.0" prefWidth="211.0" text="Music App">
+                    <font>
+                        <Font name="Segoe UI Black" size="24.0" />
+                    </font>
+                </Label>
+                <Button fx:id="HomeView" alignment="CENTER" mnemonicParsing="false" onAction="#changeViewAction" prefHeight="63.0" prefWidth="216.0" style="-fx-background-color: transparent;" styleClass="sidebar" stylesheets="@application.css" text="Home">
+                    <font>
+                        <Font name="Segoe UI Semibold" size="20.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+                <Button fx:id="SearchView" alignment="CENTER" layoutX="10.0" layoutY="239.0" mnemonicParsing="false" onAction="#changeViewAction" prefHeight="69.0" prefWidth="213.0" style="-fx-background-color: transparent;" styleClass="sidebar" stylesheets="@application.css" text="Search">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                    <font>
+                        <Font name="Segoe UI Semibold" size="20.0" />
+                    </font>
+                </Button>
+                <Button fx:id="PlaylistView" alignment="CENTER" layoutX="10.0" layoutY="113.0" mnemonicParsing="false" onAction="#changeViewAction" prefHeight="63.0" prefWidth="213.0" style="-fx-background-color: transparent;" styleClass="sidebar" stylesheets="@application.css" text="Playlist">
+                    <font>
+                        <Font name="Segoe UI Semibold" size="20.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+                <Button fx:id="AccountView" alignment="CENTER" layoutX="10.0" layoutY="214.0" mnemonicParsing="false" onAction="#changeViewAction" prefHeight="69.0" prefWidth="213.0" style="-fx-background-color: transparent;" styleClass="sidebar" stylesheets="@application.css" text="Account">
+                    <font>
+                        <Font name="Segoe UI Semibold" size="20.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+            <Button fx:id="DownloadView" alignment="CENTER" mnemonicParsing="false" onAction="#changeViewAction" prefHeight="69.0" prefWidth="213.0" style="-fx-background-color: transparent;" styleClass="sidebar" stylesheets="@../../../../../spotify-clone-project(update)/spotify/src/spotify/view/application.css" text="Download">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Segoe UI Semibold" size="20.0" />
+               </font>
+            </Button>
+            </children>
+        </VBox>
+    </left>
+    <bottom>
+        <Pane prefHeight="80.0" prefWidth="1280.0" styleClass="bottombar" stylesheets="@application.css" BorderPane.alignment="CENTER">
+            <children>
+                <ProgressBar fx:id="progressBar" layoutX="509.0" layoutY="20.0" prefHeight="7.0" prefWidth="284.0" progress="0.0" stylesheets="@application.css" />
+            <ImageView fx:id="albumCover" fitHeight="50.0" fitWidth="51.0" layoutX="23.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true" />
+                <Label fx:id="realTimeDuration" layoutX="458.0" layoutY="15.0" text="0:00">
+                    <font>
+                        <Font size="13.0" />
+                    </font>
+                </Label>
+                <Label fx:id="timeLabelBar" layoutX="824.0" layoutY="15.0" text="t:tt">
+                    <font>
+                        <Font size="13.0" />
+                    </font>
+                </Label>
+                <Label fx:id="songNameBar" layoutX="84.0" layoutY="14.0">
+                    <font>
+                        <Font name="Calibri" size="19.0" />
+                    </font>
+                </Label>
+                <Label fx:id="authorBar" layoutX="86.0" layoutY="39.0">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </Label>
+                <Button fx:id="pauseButton" layoutX="620.0" layoutY="29.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#changePlayState" prefHeight="40.0" prefWidth="40.0" styleClass="round-bottom" stylesheets="@application.css" text="Button">
+                    <graphic>
+                        <ImageView fitHeight="31.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="file:/D:/java-project/spotify/src/icons/pause.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+                <Button fx:id="preButton" layoutX="567.0" layoutY="29.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#setPreSong" prefHeight="40.0" prefWidth="40.0" styleClass="round-bottom" stylesheets="@application.css" text="Button">
+                    <graphic>
+                        <ImageView fitHeight="31.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="file:/D:/java-project/spotify/src/icons/skip-left.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+                <Button fx:id="loopButton" layoutX="741.0" layoutY="29.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#setLoop" prefHeight="40.0" prefWidth="40.0" styleClass="round-bottom" stylesheets="@application.css" text="Button">
+                    <graphic>
+                        <ImageView fx:id="loopImage" fitHeight="31.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="file:/D:/java-project/spotify/src/icons/repeat.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+                <Button fx:id="volumeButton" layoutX="1082.0" layoutY="20.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" styleClass="round-bottom" stylesheets="@application.css" text="Button">
+                    <graphic>
+                        <ImageView fitHeight="31.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="file:/D:/java-project/spotify/src/icons/volume.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+                <Button fx:id="shuffleButton" layoutX="509.0" layoutY="29.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#setShuffle" prefHeight="40.0" prefWidth="40.0" styleClass="round-bottom" stylesheets="@application.css" text="Button">
+                    <graphic>
+                        <ImageView fitHeight="31.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="file:/D:/java-project/spotify/src/icons/shuffle.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+                <Button fx:id="nextButton" layoutX="674.0" layoutY="29.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#setNextSong" prefHeight="40.0" prefWidth="40.0" styleClass="round-bottom" stylesheets="@application.css" text="Button">
+                    <graphic>
+                        <ImageView fitHeight="31.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="file:/D:/java-project/spotify/src/icons/skip-right.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+                <Slider fx:id="volumSlider" layoutX="1126.0" layoutY="33.0" value="50.0" />
+            </children>
+        </Pane>
+    </bottom>
+</BorderPane>

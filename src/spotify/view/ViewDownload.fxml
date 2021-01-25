@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1074.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="spotify.controller.DownloadViewController">
+   <children>
+      <ScrollPane layoutX="89.0" layoutY="153.0" prefHeight="525.0" prefWidth="897.0" stylesheets="@../../../../../spotify-clone-project(update)/spotify/src/spotify/view/application.css">
+         <content>
+            <VBox fx:id="DownloadViewBox" prefHeight="47.0" prefWidth="895.0" />
+         </content>
+      </ScrollPane>
+      <Label layoutX="89.0" layoutY="30.0" prefHeight="56.0" prefWidth="231.0" text="DOWNLOAD MUSIC">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Label layoutX="121.0" layoutY="117.0" text="ARTIST">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="292.0" layoutY="117.0" text="TITLE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="652.0" layoutY="117.0" text="TIME">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="862.0" layoutY="117.0" text="PLAY">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

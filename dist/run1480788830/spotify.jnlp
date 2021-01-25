@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="spotify.jnlp">
+  <information>
+    <title>spotify</title>
+    <vendor>ADMIN</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="lib\jl1.0.1.jar" size="105363" download="eager" />
+    <jar href="lib\mp3agic-0.9.0.jar" size="70004" download="eager" />
+    <jar href="lib\mp3spi-1.9.5.jar" size="24696" download="eager" />
+    <jar href="lib\tritonus_mp3-0.3.6.jar" size="21166" download="eager" />
+    <jar href="lib\tritonus_share.jar" size="102673" download="eager" />
+    <jar href="spotify.jar" size="204385" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="spotify" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="spotify.main.Spotify"  name="spotify" />
+  <update check="always"/>
+</jnlp>

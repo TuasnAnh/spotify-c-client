@@ -1,0 +1,55 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+.sidebar{
+    -fx-text-fill: black;
+}
+.sidebar:hover{
+    -fx-underline: true;
+    -fx-text-fill: #30b8ee;
+}
+.sidebar:pressed{
+    -fx-underline: true;
+}
+.white-round-carts{
+    -fx-background-color: #fff;
+    -fx-background-radius: 20px;
+}
+.white-round-strip{
+    -fx-background-color: #fff;
+    -fx-background-radius: 10px;
+}
+.round-btn{
+    -fx-background-color: #F5F8FF;
+    -fx-background-radius: 100%;
+}
+.progress-bar > .bar {
+    -fx-background-insets: 1 1 2 1;
+    -fx-padding: 0.20em;
+}
+.bottombar{
+    -fx-background-color: rgb(164,164,164);
+}
+.round-bottom{
+    -fx-background-color: rgb(164,164,164);
+    -fx-background-radius:100%;
+}
+.loginbtn{
+    -fx-background-color: rgb(20,187,205);
+    -fx-background-radius: 5px;
+}
+.registerbtn{
+    -fx-background-color: transparent;
+    -fx-text-fill: rgb(0,0,0);
+}
+.registerbtn:hover{
+    -fx-underline: true;
+}
+
+.scroll-pane {
+    -fx-background-color:transparent;
+}
+
+.card-pane {
+    -fx-border-style: hidden hidden solid hidden;
+    -fx-border-width: 1;
+    -fx-border-color: black;
+}
